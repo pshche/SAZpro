@@ -1,0 +1,422 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.71.0"
+  },
+  "ReportID": "019e9c64-a955-7249-9f79-479352cc76aa",
+  "CreatedAt": "2026-06-06T13:05:03.189152+03:00",
+  "ArtifactID": "sha256:14115954bca5afc26578caf3c45cb6b8685e8c63d4565dfabf3706b609355f8c",
+  "ArtifactName": "targets/webgoat",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/WebGoat/WebGoat.git",
+    "Branch": "main",
+    "Commit": "35b07bab75dfc981a2e366b08262e056be3b57d5",
+    "CommitMsg": "first commit",
+    "Author": "pshche \u003cwwwwqv@gmail.com\u003e",
+    "Committer": "pshche \u003cwwwwqv@gmail.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "Dockerfile",
+      "Class": "config",
+      "Type": "dockerfile",
+      "MisconfSummary": {
+        "Successes": 27,
+        "Failures": 0
+      }
+    },
+    {
+      "Target": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 31,
+          "EndLine": 31,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 29,
+                "Content": "    var secretKey = \"test\";",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "    var secretKey = \"test\";",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 30,
+                "Content": "    var jwt =",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "    var jwt =",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 31,
+                "Content": "        \"***********************************************************************************************************************************************************\";",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "        \"***********************************************************************************************************************************************************\";",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 32,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "        \"***********************************************************************************************************************************************************\";",
+          "Offset": 1019
+        }
+      ]
+    },
+    {
+      "Target": "src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 28,
+          "EndLine": 28,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 26,
+                "Content": "[source]",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "[source]",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 27,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 28,
+                "Content": "var token = \"***********************************************************************************************************************************************************\";",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "var token = \"***********************************************************************************************************************************************************\";",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 29,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "var token = \"***********************************************************************************************************************************************************\";",
+          "Offset": 319
+        },
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 40,
+          "EndLine": 40,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 38,
+                "Content": "[source]",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "[source]",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 39,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 40,
+                "Content": "var token = \" **********************************************************************************************************************************************************\";",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "var token = \" **********************************************************************************************************************************************************\";",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 41,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "var token = \" **********************************************************************************************************************************************************\";",
+          "Offset": 678
+        },
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 56,
+          "EndLine": 56,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 54,
+                "Content": "[source]",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "[source]",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 55,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 56,
+                "Content": "var token = \"***************************************************************************************************************\";",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "var token = \"***************************************************************************************************************\";",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 57,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "var token = \"***************************************************************************************************************\";",
+          "Offset": 1159
+        }
+      ]
+    },
+    {
+      "Target": "src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment.adoc",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 7,
+          "EndLine": 7,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 5,
+                "Content": "[source]",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "[source]",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 6,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 7,
+                "Content": "********************************************************************************************************************************",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "********************************************************************************************************************************",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 8,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "********************************************************************************************************************************",
+          "Offset": 146
+        }
+      ]
+    },
+    {
+      "Target": "src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 35,
+          "EndLine": 35,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 33,
+                "Content": "GET http://localhost:8080/WebGoat/JWT/votings/login?user=Tom HTTP/1.1",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "GET http://localhost:8080/WebGoat/JWT/votings/login?user=Tom HTTP/1.1",
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 34,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 35,
+                "Content": "access_token=***************************************************************************************************************************************************************************",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "access_token=***************************************************************************************************************************************************************************",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 36,
+                "Content": "----",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "----",
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "access_token=***************************************************************************************************************************************************************************",
+          "Offset": 1673
+        }
+      ]
+    },
+    {
+      "Target": "src/main/resources/lessons/jwt/images/logs.txt",
+      "Class": "secret",
+      "Secrets": [
+        {
+          "RuleID": "jwt-token",
+          "Category": "JWT",
+          "Severity": "MEDIUM",
+          "Title": "JWT token",
+          "StartLine": 2,
+          "EndLine": 2,
+          "Code": {
+            "Lines": [
+              {
+                "Number": 1,
+                "Content": "",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "FirstCause": false,
+                "LastCause": false
+              },
+              {
+                "Number": 2,
+                "Content": "T /JWT/refresh/checkout?token=************************************************************************************************************************************************************************************************** HTTP/1.1\" 401 242 \"",
+                "IsCause": true,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "T /JWT/refresh/checkout?token=************************************************************************************************************************************************************************************************** HTTP/1.1\" 401 242 \"",
+                "FirstCause": true,
+                "LastCause": true
+              },
+              {
+                "Number": 3,
+                "Content": "194.201.170.15 - - [28/Jan/2016:21:28:01 +0100] \"POST /JWT/refresh/moveToCheckout HTTP/1.1\" 200 1278",
+                "IsCause": false,
+                "Annotation": "",
+                "Truncated": false,
+                "Highlighted": "194.201.170.15 - - [28/Jan/2016:21:28:01 +0100] \"POST /JWT/refresh/moveToCheckout HTTP/1.1\" 200 1278",
+                "FirstCause": false,
+                "LastCause": false
+              }
+            ]
+          },
+          "Match": "T /JWT/refresh/checkout?token=************************************************************************************************************************************************************************************************** HTTP/1.1\" 401 242 \"",
+          "Offset": 82
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+###опущенна бОльшая часть лога для кеширования получения правил семгрепа в установка в codespacegithub
+###и перекидывания на локальный хост и настройка semgrep
+
+
+
+ps@MacBook-Pro-Pavel juice-shop % semgrep scan \
+  --config ~/semgrep-official/javascript \
+  --config ~/semgrep-official/java \
+  --sarif \
+  --output ~/SAZ/saz-lab/reports/sast/juice-shop.sarif \
+  --metrics=off \
+> 
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % semgrep scan \
+  --config ~/semgrep-official/javascript \
+  --config ~/semgrep-official/java \
+  --sarif \
+  --output ~/SAZ/saz-lab/reports/sast/juice-shop.sarif \
+  --metrics=off \ 
+> .
+
+┌──── ○○○ ────┐
+│ Semgrep CLI │
+└─────────────┘
+
+Scanning 1113 files (only git-tracked) with 312 Code rules:
+            
+  CODE RULES
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  <multilang>      13    1113          Custom     312                                                                   
+  ts              170     505                                                                                           
+  yaml              2      93                                                                                           
+  js              170      12                                                                                           
+                                                                                                                        
+                    
+  SUPPLY CHAIN RULES
+                  
+  No rules to run.
+                  
+          
+  PROGRESS
+   
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:01:02                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 135 (135 blocking)
+ • Rules run: 185
+ • Targets scanned: 1113
+ • Parsed lines: ~99.9%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 4
+   ◦ Files matching .semgrepignore patterns: 140
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 185 rules on 1113 files: 135 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+ps@MacBook-Pro-Pavel juice-shop % semgrep scan \
+  --config ~/semgrep-official/javascript \
+  --config ~/semgrep-official/java \
+  --json \
+  --output ~/SAZ/saz-lab/reports/sast/juice-shop.json \
+  --metrics=off \
+  .
+
+┌──── ○○○ ────┐
+│ Semgrep CLI │
+└─────────────┘
+
+Scanning 1113 files (only git-tracked) with 312 Code rules:
+            
+  CODE RULES
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  <multilang>      13    1113          Custom     312                                                                   
+  ts              170     505                                                                                           
+  yaml              2      93                                                                                           
+  js              170      12                                                                                           
+                                                                                                                        
+                    
+  SUPPLY CHAIN RULES
+                  
+  No rules to run.
+                  
+          
+  PROGRESS
+   
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:01:04                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 135 (135 blocking)
+ • Rules run: 185
+ • Targets scanned: 1113
+ • Parsed lines: ~99.9%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 4
+   ◦ Files matching .semgrepignore patterns: 140
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 185 rules on 1113 files: 135 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+ps@MacBook-Pro-Pavel juice-shop % 
+
+
+
+
+#!/bin/bash
+PROJECT_DIR="/Users/ps/SAZ/saz-lab/targets/juice-shop"
+REPORTS_DIR="$HOME/SAZ/saz-lab/reports/sast"
+RULES_DIR1="/Users/ps/semgrep-rules"
+RULES_DIR2="/Users/ps/.semgrep/my_rules"
+
+echo "🔍 Начинаем сканирование juice-shop..."
+cd "$PROJECT_DIR" || exit 1
+mkdir -p "$REPORTS_DIR"
+
+# Создаём .semgrepignore
+cat > .semgrepignore << 'EOF'
+node_modules/
+dist/
+build/
+*.min.js
+*.bundle.js
+*.min.css
+frontend/src/assets/private/three.js
+frontend/src/assets/private/OrbitControls.js
+data/static/codefixes/
+*.json
+*.yml
+EOF
+echo "✅ .semgrepignore создан"
+
+# Проверяем существование папок правил
+CONFIG_ARGS=""
+if [ -d "$RULES_DIR1/javascript" ]; then
+    CONFIG_ARGS="$CONFIG_ARGS --config $RULES_DIR1/javascript"
+else
+    echo "⚠️ Папка $RULES_DIR1/javascript не найдена, пропускаем"
+fi
+if [ -d "$RULES_DIR1/typescript" ]; then
+    CONFIG_ARGS="$CONFIG_ARGS --config $RULES_DIR1/typescript"
+else
+    echo "⚠️ Папка $RULES_DIR1/typescript не найдена, пропускаем"
+fi
+  Files that couldn't be accessed:
+
+   • <none>
+
+  Skipped by limiting to files smaller than 1000000 bytes:
+  (Adjust with the --max-target-bytes flag)
+
+   • frontend/src/assets/public/images/products/20th.jpeg
+   • frontend/src/assets/public/videos/owasp_promo.mp4
+   • screenshots/screenshot07.png
+   • screenshots/slideshow.gif
+
+  Partially analyzed due to parsing or internal Semgrep errors
+
+   • <none>
+
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 92 (92 blocking)
+ • Rules run: 181
+ • Targets scanned: 946
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 4
+   ◦ Files matching .semgrepignore patterns: 309
+ • Scan was limited to files tracked by git
+Ran 181 rules on 946 files: 92 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+Not sending pseudonymous metrics since metrics are configured to OFF, registry usage is False, and login status is False
+✅ Сканирование завершено. Отчёт: /Users/ps/SAZ/saz-lab/reports/sast/juice-shop.json
+📊 Найдено проблем: 92
+ps@MacBook-Pro-Pavel juice-shop % clear
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % vim scan.sh
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % ./scan.sh  
+🔍 Начинаем сканирование juice-shop...
+✅ .semgrepignore создан
+⚠️ Папка /Users/ps/semgrep-rules/javascript не найдена, пропускаем
+⚠️ Папка /Users/ps/semgrep-rules/typescript не найдена, пропускаем
+
+┌──── ○○○ ────┐
+│ Semgrep CLI │
+└─────────────┘
+
+running 182 rules from 173 configs
+Rules:
+<SKIPPED DATA (too many entries; use --max-log-list-entries)>
+Scanning 946 files (only git-tracked) with 182 Code rules:
+            
+  CODE RULES
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  ts              170     524          Custom     182                                                                   
+  <multilang>      11     515                                                                                           
+  js              170      11                                                                                           
+                                                                                                                        
+                    
+  SUPPLY CHAIN RULES
+                  
+  No rules to run.
+                  
+          
+  PROGRESS
+   
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:15                                                                                                                        
+SCA findings adjustment: No SCA rules to adjust
+
+========================================
+Files skipped:
+========================================
+
+  Always skipped by Semgrep:
+
+   • <none>
+
+  Skipped by .gitignore:
+  (Disable by passing --no-git-ignore)
+
+   • <all files not listed by `git ls-files` were skipped>
+
+  Skipped by .semgrepignore:
+  - https://semgrep.dev/docs/ignoring-files-folders-code/#understand-semgrep-defaults
+
+   • <SKIPPED DATA (too many entries; use --max-log-list-entries)>
+
+  Skipped by --include patterns:
+
+   • <none>
+
+  Skipped by --exclude patterns:
+
+   • <none>
+
+  Files that couldn't be accessed:
+
+   • <none>
+
+  Skipped by limiting to files smaller than 1000000 bytes:
+  (Adjust with the --max-target-bytes flag)
+
+   • frontend/src/assets/public/images/products/20th.jpeg
+   • frontend/src/assets/public/videos/owasp_promo.mp4
+   • screenshots/screenshot07.png
+   • screenshots/slideshow.gif
+
+  Partially analyzed due to parsing or internal Semgrep errors
+
+   • <none>
+
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 92 (92 blocking)
+ • Rules run: 181
+ • Targets scanned: 946
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 4
+   ◦ Files matching .semgrepignore patterns: 309
+ • Scan was limited to files tracked by git
+Ran 181 rules on 946 files: 92 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+Not sending pseudonymous metrics since metrics are configured to OFF, registry usage is False, and login status is False
+✅ Сканирование завершено. Отчёт: /Users/ps/SAZ/saz-lab/reports/sast/juice-shop.json
+📊 Найдено проблем: 92
+ps@MacBook-Pro-Pavel juice-shop % vim scan.sh
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % open .
+ps@MacBook-Pro-Pavel juice-shop % cd ..
+ps@MacBook-Pro-Pavel targets % cd ..
+ps@MacBook-Pro-Pavel saz-lab % cd reports/sast 
+ps@MacBook-Pro-Pavel sast % ./scan.sh 
+🔍 Начинаем сканирование juice-shop...
+✅ .semgrepignore создан
+⚠️ Папка /Users/ps/semgrep-rules/javascript не найдена, пропускаем
+⚠️ Папка /Users/ps/semgrep-rules/typescript не найдена, пропускаем
+🚀 Запуск semgrep (формат: json)...
+Usage: semgrep scan [--help] [OPTION]… [TARGETS]…
+semgrep scan: unknown option --format. Did you mean -f?
+⚠️ Semgrep завершился с ошибкой (код возврата 1). Результат может быть неполным.
+ps@MacBook-Pro-Pavel sast % ./scan.sh
+🔍 Начинаем сканирование webgoat (формат: json, файл: /Users/ps/SAZ/saz-lab/reports/sast/webgoat_sast_results.json)...
+✅ .semgrepignore создан
+⚠️ Папка /Users/ps/semgrep-rules/javascript не найдена, пропускаем
+⚠️ Папка /Users/ps/semgrep-rules/typescript не найдена, пропускаем
+🚀 Запуск semgrep...
+Usage: semgrep scan [--help] [OPTION]… [TARGETS]…
+semgrep scan: unknown option --format. Did you mean -f?
+⚠️ Semgrep завершился с ошибкой (код возврата 1). Результат может быть неполным.
+ps@MacBook-Pro-Pavel sast % semgrep --version
+1.164.0
+ps@MacBook-Pro-Pavel sast % semgrep --version
+1.164.0
+ps@MacBook-Pro-Pavel sast % ./scan.sh        
+🔍 Сканирование webgoat (формат: json)...
+Usage: semgrep scan [--help] [OPTION]… [TARGETS]…
+semgrep scan: unknown option --format. Did you mean -f?
+✅ Результат: /Users/ps/SAZ/saz-lab/reports/sast/webgoat_sast_results.json
+ps@MacBook-Pro-Pavel sast % ./scan.sh
+🔍 Сканирование webgoat (формат: json)
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 1171 files tracked by git with 182 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  <multilang>       7     620          Custom     182                                                                   
+  js              170      81                                                                                           
+                                                                                                                        
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:40                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 293 (293 blocking)
+ • Rules run: 177
+ • Targets scanned: 1171
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 2
+   ◦ Files matching .semgrepignore patterns: 27
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 177 rules on 1171 files: 293 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+✅ Результат сохранён: /Users/ps/SAZ/saz-lab/reports/sast/webgoat_sast_results.json
+ps@MacBook-Pro-Pavel sast % ./scan.sh
+🔍 Сканирование webgoat (формат: sarif)
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 1171 files tracked by git with 182 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  <multilang>       7     620          Custom     182                                                                   
+  js              170      81                                                                                           
+                                                                                                                        
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:41                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 293 (293 blocking)
+ • Rules run: 177
+ • Targets scanned: 1171
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 2
+   ◦ Files matching .semgrepignore patterns: 27
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 177 rules on 1171 files: 293 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
+✅ Результат сохранён: /Users/ps/SAZ/saz-lab/reports/sast/webgoat_sast_results.sarif
+ps@MacBook-Pro-Pavel sast % 

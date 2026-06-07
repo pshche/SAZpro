@@ -1,0 +1,121 @@
+ps@MacBook-Pro-Pavel SAZ % semgrep scan \
+  --config ~/semgrep-official/javascript \
+  --config ~/semgrep-official/generic \
+  --config ~/semgrep-official/java \
+  --config ~/semgrep-official/python \
+  --json --output ~/SAZ/saz-lab/reports/sast/juice-shop.json \
+  --metrics=off .
+ps@MacBook-Pro-Pavel SAZ % cd saz-lab/targets/juice-shop 
+ps@MacBook-Pro-Pavel juice-shop % semgrep scan \
+  --config ~/semgrep-official/javascript \
+  --config ~/semgrep-official/generic \
+  --config ~/semgrep-official/java \
+  --config ~/semgrep-official/python \
+  --json --output ~/SAZ/saz-lab/reports/sast/juice-shop.json \
+  --metrics=off .
+
+┌──── ○○○ ────┐
+│ Semgrep CLI │
+└─────────────┘
+
+Scanning 946 files (only git-tracked) with 947 Code rules:
+            
+  CODE RULES
+                                                                                                                        
+  Language      Rules   Files          Origin   Rules                                                                   
+ ─────────────────────────────        ────────────────                                                                  
+  <multilang>     276     631          Custom     947                                                                   
+  ts              171     524                                                                                           
+  js              171      11                                                                                           
+  python          369       3                                                                                           
+  bash              1       3                                                                                           
+  yaml              3       2                                                                                           
+  dockerfile        2       2                                                                                           
+                                                                                                                        
+                    
+  SUPPLY CHAIN RULES
+                  
+  No rules to run.
+                  
+          
+  PROGRESS
+   
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:09                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 187 (187 blocking)
+ • Rules run: 819
+ • Targets scanned: 946
+ • Parsed lines: ~100.0%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 4
+   ◦ Files matching .semgrepignore patterns: 309
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 819 rules on 946 files: 187 findings.
+ps@MacBook-Pro-Pavel juice-shop % 
+
+
+ps@MacBook-Pro-Pavel saz-lab % 
+ps@MacBook-Pro-Pavel saz-lab % curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=Semgrep JSON Report" \
+  -F "engagement=11" \
+  -F "file=@reports/sast/juice-shop.json" \
+  -F "active=true" -F "verified=false"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=ZAP Scan" \
+  -F "engagement=11" \
+  -F "file=@reports/dast/juice-shop.full.xml"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=Trivy Scan" \
+  -F "engagement=11" \
+  -F "file=@reports/ca/juice-shop.image.json"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=CycloneDX Scan" \
+  -F "engagement=11" \
+  -F "file=@/Users/ps/SAZ/saz-lab/reports/sca/juice-shop-vex.cdx.json;type=application/json"
+
+
+{"minimum_severity":"Info","active":true,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":73,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":63,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":63},"medium":{"active":64,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":64},"high":{"active":35,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":35},"critical":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"total":{"active":162,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":162}}},"pro":["Did you know, Pro has an automated no-code connector for Semgrep JSON Report? Try today for free or email us at hello@defectdojo.com"],"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"Semgrep JSON Report","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":73}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":74,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":6,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":6},"low":{"active":7,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":7},"medium":{"active":6,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":6},"high":{"active":1,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":1},"critical":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"total":{"active":20,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":20}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"ZAP Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":74}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":75,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":12,"verified":12,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":12},"medium":{"active":33,"verified":31,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":33},"high":{"active":41,"verified":39,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":41},"critical":{"active":5,"verified":5,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":5},"total":{"active":91,"verified":87,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":91}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"Trivy Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":75}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":76,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":10,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":10},"medium":{"active":49,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":49},"high":{"active":25,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":25},"critical":{"active":3,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":3},"total":{"active":87,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":87}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"CycloneDX Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":76}%                                                                                                                                               ps@MacBook-Pro-Pavel saz-lab % 
+ps@MacBook-Pro-Pavel saz-lab % 
+ps@MacBook-Pro-Pavel saz-lab % curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=Semgrep JSON Report" \
+  -F "engagement=11" \
+  -F "file=@reports/sast/juice-shop.json" \
+  -F "active=true" -F "verified=false"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=ZAP Scan" \
+  -F "engagement=11" \
+  -F "file=@reports/dast/juice-shop.full.xml"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=Trivy Scan" \
+  -F "engagement=11" \
+  -F "file=@reports/ca/juice-shop.image.json"
+
+curl -X POST "http://localhost:8088/api/v2/import-scan/" \
+  -H "Authorization: Token 19d0e9c8d151f2f763f4ba19b824fb718721a685" \
+  -F "scan_type=CycloneDX Scan" \
+  -F "engagement=11" \
+  -F "file=@/Users/ps/SAZ/saz-lab/reports/sca/juice-shop-vex.cdx.json;type=application/json"
+
+
+{"minimum_severity":"Info","active":true,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":77,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":63,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":63},"medium":{"active":64,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":64},"high":{"active":35,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":35},"critical":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"total":{"active":162,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":162}}},"pro":["Did you know, Pro has an automated no-code connector for Semgrep JSON Report? Try today for free or email us at hello@defectdojo.com"],"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"Semgrep JSON Report","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":77}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":78,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":6,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":6},"low":{"active":7,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":7},"medium":{"active":6,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":6},"high":{"active":1,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":1},"critical":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"total":{"active":20,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":20}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"ZAP Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":78}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":79,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":12,"verified":12,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":12},"medium":{"active":33,"verified":31,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":33},"high":{"active":41,"verified":39,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":41},"critical":{"active":5,"verified":5,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":5},"total":{"active":91,"verified":87,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":91}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"Trivy Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":79}{"minimum_severity":"Info","active":false,"verified":false,"endpoint_to_add":null,"auto_create_context":false,"deduplication_on_engagement":false,"lead":null,"push_to_jira":false,"api_scan_configuration":null,"create_finding_groups_for_all_findings":true,"test_id":80,"engagement_id":11,"product_id":1,"product_type_id":1,"statistics":{"after":{"info":{"active":0,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":0},"low":{"active":10,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":10},"medium":{"active":49,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":49},"high":{"active":25,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":25},"critical":{"active":3,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":3},"total":{"active":87,"verified":0,"duplicate":0,"false_p":0,"out_of_scope":0,"is_mitigated":0,"risk_accepted":0,"total":87}}},"apply_tags_to_findings":false,"apply_tags_to_endpoints":false,"scan_type":"CycloneDX Scan","engagement":11,"close_old_findings":false,"close_old_findings_product_scope":false,"test":80}%                                                                                                                                               ps@MacBook-Pro-Pavel saz-lab % 
+
+
+

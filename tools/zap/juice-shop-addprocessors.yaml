@@ -1,0 +1,69 @@
+env:
+  contexts:
+    - name: juice-shop
+      urls:
+        - http://host.docker.internal:3000
+      includePaths:
+        - ".*"                           # все пути на этом хосте
+      excludePaths:
+        - ".*\\.png"
+        - ".*\\.jpg"
+        - ".*\\.svg"
+        - ".*\\.woff2?"
+      authentication:
+        method: json
+        parameters:
+          loginPageUrl: http://host.docker.internal:3000/#/login
+          loginRequestUrl: http://host.docker.internal:3000/rest/user/login
+          loginRequestBody: '{"email":"{%username%}","password":"{%password%}"}'
+        verification:
+          method: response
+          loggedInRegex: '"authentication"'
+          loggedOutRegex: '"error"'
+      sessionManagement:
+        method: cookie
+      users:
+        - name: student
+          credentials:
+            username: student@juice-sh.op
+            password: Student!23
+  parameters:
+    failOnError: true
+    progressToStdout: true
+
+jobs:
+  - type: passiveScan-config
+    parameters:
+      maxAlertsPerRule: 10
+
+  - type: spider
+    parameters:
+      context: juice-shop
+      user: student
+      maxDuration: 3
+      threadCount: 8                     # 8 потоков для обычного паука
+
+  - type: spiderAjax
+    parameters:
+      context: juice-shop
+      user: student
+      maxDuration: 5
+      threadCount: 8                     # 8 потоков для AJAX-паука
+
+  - type: passiveScan-wait
+    parameters:
+      maxDuration: 5
+
+  - type: activeScan
+    parameters:
+      context: juice-shop
+      user: student
+      threadPerHost: 8                   # активное сканирование в 8 потоков
+      maxRuleDurationInMins: 3
+      maxScanDurationInMins: 30
+
+  - type: report
+    parameters:
+      template: traditional-xml
+      reportDir: /zap/wrk
+      reportFile: juice-shop.af

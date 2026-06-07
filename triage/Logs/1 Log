@@ -1,0 +1,1077 @@
+ps@MacBook-Pro-Pavel SAZ % docker --version
+Docker version 29.4.0, build 9d7ad9f
+ps@MacBook-Pro-Pavel SAZ % docker compose version
+Docker Compose version v5.1.1
+ps@MacBook-Pro-Pavel SAZ % git --version
+
+git version 2.23.0
+ps@MacBook-Pro-Pavel SAZ % python3 --version
+Python 3.11.5
+ps@MacBook-Pro-Pavel SAZ % node --version 
+zsh: command not found: node
+ps@MacBook-Pro-Pavel SAZ % mkdir -p saz-lab/{targets,tools/{dependency-track,defectdojo,zap,semgrep-custom},reports/{sast,sca,ca,iac,dast,asoc},triage/screenshots}
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % ды
+zsh: command not found: ды
+ps@MacBook-Pro-Pavel SAZ % ls
+saz-lab	Task
+ps@MacBook-Pro-Pavel SAZ % brew install node 
+==> Auto-updating Homebrew...
+Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
+`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core and homebrew/cask).
+==> New Formulae
+aube: Fast Node.js package manager
+dz6: Fast Vim-inspired TUI hex editor
+sdl2-compat: SDL2 compatibility layer that uses SDL3 behind the scenes
+sdl3_net: Simple cross-platform wrapper over TCP/IP sockets
+wl-clipboard: Command-line copy/paste utilities for Wayland
+==> New Casks
+agentsmesh: AI agent workforce platform
+cc-pocket: Remote client for Codex and Claude coding agents
+choragus: Sonos controller
+devin-cli: Coding agent with Devin Cloud integration
+exo: Run AI models locally across multiple devices
+facescreen: Camera and text overlay for presentations and screen sharing
+font-xiaolai
+font-xiaolai-mono
+harvest: Time tracking application
+mactools: Menu bar toolbox
+mirai: Inference engine for AI models
+mister-plimsoll: Storage volume usage monitoring and fullness notifications
+open-island: Native companion app for AI coding agents
+ping-island: Menu bar status for coding agent sessions
+rcmd: App switcher driven by the Right Command key
+vmlx: Run local AI models on Apple Silicon
+whatcable: Menu bar app for USB-C cable diagnostics
+
+You have 14 outdated formulae and 1 outdated cask installed.
+
+Inspect the formula dependency plan before installing with `brew install --ask`.
+Enable ask mode by setting `HOMEBREW_ASK=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Fetching downloads for: node
+✔︎ Bottle Manifest node (26.0.0)                                                          Downloaded   33.4KB/ 33.4KB
+✔︎ Bottle Manifest fmt (12.1.0)                                                           Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest ada-url (3.4.4)                                                        Downloaded    8.7KB/  8.7KB
+✔︎ Bottle Manifest brotli (1.2.0)                                                         Downloaded    8.0KB/  8.0KB
+✔︎ Bottle Manifest c-ares (1.34.6)                                                        Downloaded    7.5KB/  7.5KB
+✔︎ Bottle Manifest hdrhistogram_c (0.11.9)                                                Downloaded    7.8KB/  7.8KB
+✔︎ Bottle hdrhistogram_c (0.11.9)                                                         Downloaded   42.9KB/ 42.9KB
+✔︎ Bottle Manifest libnghttp2 (1.69.0)                                                    Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest libnghttp3 (1.16.0)                                                    Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest libngtcp2 (1.23.0)                                                     Downloaded    9.7KB/  9.7KB
+✔︎ Bottle ca-certificates (2026-05-14)                                                    Downloaded  112.1KB/112.1KB
+✔︎ Bottle Manifest llhttp (9.4.1)                                                         Downloaded    7.2KB/  7.2KB
+✔︎ Bottle Manifest libuv (1.52.1)                                                         Downloaded    7.5KB/  7.5KB
+✔︎ Bottle Manifest nbytes (0.1.4)                                                         Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest simdutf (9.0.0)                                                        Downloaded    9.0KB/  9.0KB
+✔︎ Bottle Manifest merve (1.2.2_1)                                                        Downloaded    9.4KB/  9.4KB
+✔︎ Bottle Manifest simdjson (4.6.4)                                                       Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest uvwasi (0.0.23)                                                        Downloaded    8.3KB/  8.3KB
+✔︎ Bottle llhttp (9.4.1)                                                                  Downloaded   37.7KB/ 37.7KB
+✔︎ Bottle merve (1.2.2_1)                                                                 Downloaded   33.3KB/ 33.3KB
+✔︎ Bottle uvwasi (0.0.23)                                                                 Downloaded   72.3KB/ 72.3KB
+✔︎ Bottle nbytes (0.1.4)                                                                  Downloaded   12.6KB/ 12.6KB
+✔︎ Bottle libnghttp3 (1.16.0)                                                             Downloaded  191.0KB/191.0KB
+✔︎ Bottle fmt (12.1.0)                                                                    Downloaded  290.7KB/290.7KB
+✔︎ Bottle libnghttp2 (1.69.0)                                                             Downloaded  230.7KB/230.7KB
+✔︎ Bottle c-ares (1.34.6)                                                                 Downloaded  308.1KB/308.1KB
+✔︎ Bottle ada-url (3.4.4)                                                                 Downloaded  351.1KB/351.1KB
+✔︎ Bottle libuv (1.52.1)                                                                  Downloaded  374.8KB/374.8KB
+✔︎ Bottle libngtcp2 (1.23.0)                                                              Downloaded  433.2KB/433.2KB
+✔︎ Bottle simdutf (9.0.0)                                                                 Downloaded  566.8KB/566.8KB
+✔︎ Bottle brotli (1.2.0)                                                                  Downloaded  808.5KB/808.5KB
+✔︎ Bottle simdjson (4.6.4)                                                                Downloaded    1.5MB/  1.5MB
+✔︎ Bottle node (26.0.0)                                                                   Downloaded   20.4MB/ 20.4MB
+==> Installing dependencies for node: fmt, ada-url, brotli, c-ares, hdrhistogram_c, libnghttp2, libnghttp3, libngtcp2, libuv, llhttp, simdutf, merve, nbytes, simdjson and uvwasi
+==> Installing node dependency: fmt
+==> Pouring fmt--12.1.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/fmt/12.1.0: 29 files, 1MB
+==> Installing node dependency: ada-url
+==> Pouring ada-url--3.4.4.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/ada-url/3.4.4: 55 files, 1.2MB
+==> Installing node dependency: brotli
+==> Pouring brotli--1.2.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/brotli/1.2.0: 33 files, 1.8MB
+==> Installing node dependency: c-ares
+==> Pouring c-ares--1.34.6.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/c-ares/1.34.6: 176 files, 969.4KB
+==> Installing node dependency: hdrhistogram_c
+==> Pouring hdrhistogram_c--0.11.9.sonoma.bottle.1.tar.gz
+🍺  /usr/local/Cellar/hdrhistogram_c/0.11.9: 22 files, 132.3KB
+==> Installing node dependency: libnghttp2
+==> Pouring libnghttp2--1.69.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/libnghttp2/1.69.0: 14 files, 814.7KB
+==> Installing node dependency: libnghttp3
+==> Pouring libnghttp3--1.16.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/libnghttp3/1.16.0: 20 files, 588.9KB
+==> Installing node dependency: libngtcp2
+==> Installing libngtcp2 dependency: ca-certificates
+==> Pouring ca-certificates--2026-05-14.all.bottle.tar.gz
+==> Regenerating CA certificate bundle from keychain, this may take a while...
+🍺  /usr/local/Cellar/ca-certificates/2026-05-14: 4 files, 200.6KB
+==> Pouring libngtcp2--1.23.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/libngtcp2/1.23.0: 21 files, 1.4MB
+==> Installing node dependency: libuv
+==> Pouring libuv--1.52.1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/libuv/1.52.1: 35 files, 1.2MB
+==> Installing node dependency: llhttp
+==> Pouring llhttp--9.4.1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/llhttp/9.4.1: 15 files, 125.4KB
+==> Installing node dependency: simdutf
+==> Pouring simdutf--9.0.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/simdutf/9.0.0: 65 files, 2.6MB
+==> Installing node dependency: merve
+==> Pouring merve--1.2.2_1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/merve/1.2.2_1: 19 files, 108.6KB
+==> Installing node dependency: nbytes
+==> Pouring nbytes--0.1.4.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/nbytes/0.1.4: 9 files, 50.7KB
+==> Installing node dependency: simdjson
+==> Pouring simdjson--4.6.4.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/simdjson/4.6.4: 19 files, 8.1MB
+==> Installing node dependency: uvwasi
+==> Pouring uvwasi--0.0.23.sonoma.bottle.1.tar.gz
+🍺  /usr/local/Cellar/uvwasi/0.0.23: 15 files, 263.2KB
+==> Installing node
+==> Pouring node--26.0.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/node/26.0.0: 1,889 files, 83.3MB
+==> Running `brew cleanup node`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+ps@MacBook-Pro-Pavel SAZ % node --version
+v26.0.0
+ps@MacBook-Pro-Pavel SAZ % node --version 
+v26.0.0
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % docker pull bkimminich/juice-shop
+Using default tag: latest
+failed to connect to the docker API at unix:///Users/ps/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/ps/.docker/run/docker.sock: connect: no such file or directory
+ps@MacBook-Pro-Pavel SAZ % docker run -d --name juice-shop -p 3000:3000 bkimminich/juice-shop 
+failed to connect to the docker API at unix:///Users/ps/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/ps/.docker/run/docker.sock: connect: no such file or directory
+ps@MacBook-Pro-Pavel SAZ % docker info
+Client:
+ Version:    29.4.0
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.42.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.20.2
+    Path:     /Users/ps/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.33.0-desktop.1
+    Path:     /Users/ps/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.1.1
+    Path:     /Users/ps/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     /Users/ps/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.3.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.2
+    Path:     /Users/ps/.docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /Users/ps/.docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.40.3
+    Path:     /Users/ps/.docker/cli-plugins/docker-mcp
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.82
+    Path:     /Users/ps/.docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.25
+    Path:     /Users/ps/.docker/cli-plugins/docker-pass
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.12.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-sandbox
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.20.3
+    Path:     /Users/ps/.docker/cli-plugins/docker-scout
+
+Server:
+failed to connect to the docker API at unix:///Users/ps/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/ps/.docker/run/docker.sock: connect: no such file or directory
+ps@MacBook-Pro-Pavel SAZ % docker start
+docker: 'docker start' requires at least 1 argument
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+See 'docker start --help' for more information
+ps@MacBook-Pro-Pavel SAZ % docker pull bkimminich/juice-shop
+Using default tag: latest
+failed to connect to the docker API at unix:///Users/ps/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/ps/.docker/run/docker.sock: connect: no such file or directory
+ps@MacBook-Pro-Pavel SAZ % docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+ps@MacBook-Pro-Pavel SAZ % open -a Docker
+ps@MacBook-Pro-Pavel SAZ % docker info
+Client:
+ Version:    29.4.0
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  agent: Docker AI Agent Runner (Docker Inc.)
+    Version:  v1.42.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-agent
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.20.2
+    Path:     /Users/ps/.docker/cli-plugins/docker-ai
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.33.0-desktop.1
+    Path:     /Users/ps/.docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.1.1
+    Path:     /Users/ps/.docker/cli-plugins/docker-compose
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     /Users/ps/.docker/cli-plugins/docker-debug
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.3.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-desktop
+  dhi: CLI for managing Docker Hardened Images (Docker Inc.)
+    Version:  v0.0.2
+    Path:     /Users/ps/.docker/cli-plugins/docker-dhi
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     /Users/ps/.docker/cli-plugins/docker-extension
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-init
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.40.3
+    Path:     /Users/ps/.docker/cli-plugins/docker-mcp
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.82
+    Path:     /Users/ps/.docker/cli-plugins/docker-offload
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.25
+    Path:     /Users/ps/.docker/cli-plugins/docker-pass
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.12.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-sandbox
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     /Users/ps/.docker/cli-plugins/docker-sbom
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.20.3
+    Path:     /Users/ps/.docker/cli-plugins/docker-scout
+
+Server:
+ Containers: 2
+  Running: 0
+  Paused: 0
+  Stopped: 2
+ Images: 11
+ Server Version: 29.4.0
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: runc io.containerd.runc.v2
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: dea7da592f5d1d2b7755e3a161be07f43fad8f75
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.12.76-linuxkit
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 15.61GiB
+ Name: docker-desktop
+ ID: 381080f5-b592-48c8-bdbe-2d214412347c
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=unix:///Users/ps/Library/Containers/com.docker.docker/Data/docker-cli.sock
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Registry Mirrors:
+  https://dockerhub1.beget.com/
+  https://mirror.gcr.io/
+  https://daocloud.io/
+  https://c.163.com/
+  https://registry.docker-cn.com/
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+ps@MacBook-Pro-Pavel SAZ % docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % docker pull bkimminich/juice-shop
+Using default tag: latest
+latest: Pulling from bkimminich/juice-shop
+fe1d31fae6c6: Pull complete 
+b4242723c53f: Pull complete 
+cac2ae0193cb: Pull complete 
+7c12895b777b: Pull complete 
+7cc70dfd88cf: Pull complete 
+b839dfae01f6: Pull complete 
+d6b1b89eccac: Pull complete 
+2780920e5dbf: Pull complete 
+ebddc55facdc: Pull complete 
+7b7c492cc60b: Pull complete 
+dd64bf2dd177: Pull complete 
+52630fc75a18: Pull complete 
+3214acf345c0: Pull complete 
+b73b1097e3a1: Pull complete 
+bd8962e29291: Pull complete 
+1a4be5562d92: Pull complete 
+dd0d9bfd3bee: Pull complete 
+7281cbae89a9: Pull complete 
+fa8ae93e2b3a: Pull complete 
+c172f21841df: Pull complete 
+b4e6f1bfce0a: Pull complete 
+bdfd7f7e5bf6: Pull complete 
+4ec36cb7292a: Pull complete 
+8224d91da70b: Pull complete 
+d57df3df0985: Download complete 
+Digest: sha256:25fd268112350ae9e0ddc7878371f9f12f5b0b546c7bf934d6599aa8e724418f
+Status: Downloaded newer image for bkimminich/juice-shop:latest
+docker.io/bkimminich/juice-shop:latest
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview bkimminich/juice-shop
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+ps@MacBook-Pro-Pavel SAZ % docker run -d --name juice-shop -p 3000:3000 bkimminich/juice-shop
+d9ebd0b7424bdd906a162e89f1f88a87d6796625a01b6568fdfa55a00a8438b3
+ps@MacBook-Pro-Pavel SAZ % docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+d9ebd0b7424b   bkimminich/juice-shop   "/nodejs/bin/node /j…"   4 seconds ago   Up 3 seconds   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   juice-shop
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % cd saz-lab/targets 
+ps@MacBook-Pro-Pavel targets % git clone --depth 1 https://github.com/juice-shop/juice-shop.git
+Cloning into 'juice-shop'...
+remote: Enumerating objects: 1395, done.
+remote: Counting objects: 100% (1395/1395), done.
+remote: Compressing objects: 100% (974/974), done.
+remote: Total 1395 (delta 394), reused 1390 (delta 394), pack-reused 0 (from 0)
+Receiving objects: 100% (1395/1395), 32.67 MiB | 105.00 KiB/s, done.
+Resolving deltas: 100% (394/394), done.
+ps@MacBook-Pro-Pavel targets % cd juice-shop && npm install --omit=dev 
+ps@MacBook-Pro-Pavel targets % cd juice-shop && npm install --omit=dev 
+⠸
+npm warn EBADENGINE Unsupported engine {
+npm warn EBADENGINE   package: 'juice-shop@20.0.0',
+npm warn EBADENGINE   required: { node: '22 - 25' },
+npm warn EBADENGINE   current: { node: 'v26.0.0', npm: '11.12.1' }
+npm warn EBADENGINE }
+npm warn deprecated osenv@0.1.5: This package is no longer supported.
+npm warn deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated eivindfjeldstad-dot@0.0.1: Use @eivifj/dot instead
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated dottie@2.0.7: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated are-we-there-yet@1.1.7: This package is no longer supported.
+npm warn deprecated gauge@2.7.4: This package is no longer supported.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated jws@0.2.6: Security update: Versions below 3.0.0 are deprecated.
+npm warn deprecated npmlog@4.1.2: This package is no longer supported.
+npm warn deprecated prebuild-install@5.3.6: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated messageformat@2.3.0: Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat@4' will eventually provide a polyfill for Intl.MessageFormat, once it's been defined by Unicode & ECMA.
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated iltorb@2.4.5: The zlib module provides APIs for brotli compression/decompression starting with Node.js v10.16.0, please use it over iltorb
+npm warn deprecated multer@1.4.5-lts.2: Multer 1.x is impacted by a number of vulnerabilities, which have been patched in 2.x. You should upgrade to the latest 2.x version.
+npm warn deprecated notevil@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated jsonwebtoken@0.4.0: Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
+npm warn deprecated node-pre-gyp@0.15.0: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+npm warn deprecated gauge@4.0.4: This package is no longer supported.
+npm warn deprecated npmlog@6.0.2: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated tar@4.4.19: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated glob@7.1.7: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated jsonwebtoken@0.1.0: Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
+npm error code 1
+npm error path /Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/libxmljs2
+npm error command failed
+npm error command sh -c prebuild-install || node-gyp rebuild
+npm error CXX(target) Release/obj.target/xmljs/src/libxmljs.o
+npm error prebuild-install warn install No prebuilt binaries found (target=26.0.0 runtime=node arch=x64 libc= platform=darwin)
+npm error gyp info it worked if it ends with ok
+npm error gyp info using node-gyp@11.5.0
+npm error gyp info using node@26.0.0 | darwin | x64
+npm error gyp info find Python using Python version 3.11.5 found at "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3"
+npm error gyp http GET https://nodejs.org/download/release/v26.0.0/node-v26.0.0-headers.tar.gz
+npm error gyp http 200 https://nodejs.org/download/release/v26.0.0/node-v26.0.0-headers.tar.gz
+npm error gyp http GET https://nodejs.org/download/release/v26.0.0/SHASUMS256.txt
+npm error gyp http 200 https://nodejs.org/download/release/v26.0.0/SHASUMS256.txt
+npm error gyp info spawn /Library/Frameworks/Python.framework/Versions/3.11/bin/python3
+npm error gyp info spawn args [
+npm error gyp info spawn args '/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/node-gyp/gyp/gyp_main.py',
+npm error gyp info spawn args 'binding.gyp',
+npm error gyp info spawn args '-f',
+npm error gyp info spawn args 'make',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/libxmljs2/build/config.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/node-gyp/addon.gypi',
+npm error gyp info spawn args '-I',
+npm error gyp info spawn args '/Users/ps/Library/Caches/node-gyp/26.0.0/include/node/common.gypi',
+npm error gyp info spawn args '-Dlibrary=shared_library',
+npm error gyp info spawn args '-Dvisibility=default',
+npm error gyp info spawn args '-Dnode_root_dir=/Users/ps/Library/Caches/node-gyp/26.0.0',
+npm error gyp info spawn args '-Dnode_gyp_dir=/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/node-gyp',
+npm error gyp info spawn args '-Dnode_lib_file=/Users/ps/Library/Caches/node-gyp/26.0.0/<(target_arch)/node.lib',
+npm error gyp info spawn args '-Dmodule_root_dir=/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/libxmljs2',
+npm error gyp info spawn args '-Dnode_engine=v8',
+npm error gyp info spawn args '--depth=.',
+npm error gyp info spawn args '--no-parallel',
+npm error gyp info spawn args '--generator-output',
+npm error gyp info spawn args 'build',
+npm error gyp info spawn args '-Goutput_dir=.'
+npm error gyp info spawn args ]
+npm error gyp info spawn make
+npm error gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:174:48: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   174 |           .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:193:48: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   193 |           .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:211:48: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   211 |           .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:272:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   272 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:290:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   290 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:347:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   347 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:366:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   366 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:384:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   384 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:525:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   525 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:543:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   543 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:600:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   600 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:618:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   618 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:182:
+npm error In file included from ../node_modules/nan/nan_callbacks.h:123:
+npm error ../node_modules/nan/nan_callbacks_12_inl.h:634:52: warning: 'Value' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   634 |               .As<v8::Value>().As<v8::External>()->Value()));
+npm error       |                                                    ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:54:3: note: 'Value' has been explicitly marked deprecated here
+npm error    54 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:302:
+npm error ../node_modules/nan/nan_maybe_43_inl.h:210:15: error: no member named 'SetPrototype' in 'v8::Object'
+npm error   210 |   return obj->SetPrototype(isolate->GetCurrentContext(), prototype);
+npm error       |          ~~~~~^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:308:
+npm error In file included from ../node_modules/nan/nan_new.h:189:
+npm error ../node_modules/nan/nan_implementation_12_inl.h:79:24: warning: 'New' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error    79 |   return v8::External::New(v8::Isolate::GetCurrent(), value);
+npm error       |                        ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:31:3: note: 'New' has been explicitly marked deprecated here
+npm error    31 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:308:
+npm error In file included from ../node_modules/nan/nan_new.h:189:
+npm error ../node_modules/nan/nan_implementation_12_inl.h:95:21: warning: 'New' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error    95 |     , v8::External::New(isolate, reinterpret_cast<void *>(callback)));
+npm error       |                     ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:31:3: note: 'New' has been explicitly marked deprecated here
+npm error    31 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:308:
+npm error In file included from ../node_modules/nan/nan_new.h:189:
+npm error ../node_modules/nan/nan_implementation_12_inl.h:131:23: warning: 'New' is deprecated: Use the version with the type tag. [-Wdeprecated-declarations]
+npm error   131 |       , v8::External::New(isolate, reinterpret_cast<void *>(callback)));
+npm error       |                       ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-external.h:31:3: note: 'New' has been explicitly marked deprecated here
+npm error    31 |   V8_DEPRECATED("Use the version with the type tag.")
+npm error       |   ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8config.h:615:35: note: expanded from macro 'V8_DEPRECATED'
+npm error   615 | # define V8_DEPRECATED(message) [[deprecated(message)]]
+npm error       |                                   ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error ../node_modules/nan/nan.h:436:59: error: no member named 'REPLACE_INVALID_UTF8' in 'v8::String'
+npm error   436 |   static const unsigned kReplaceInvalidUtf8 = v8::String::REPLACE_INVALID_UTF8;
+npm error       |                                                           ^~~~~~~~~~~~~~~~~~~~
+npm error ../node_modules/nan/nan.h:820:20: error: no matching member function for call to 'GetAlignedPointerFromInternalField'
+npm error   820 |     return object->GetAlignedPointerFromInternalField(index);
+npm error       |            ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:960:15: note: candidate function not viable: requires 2 arguments, but 1 was provided
+npm error   960 | void* Object::GetAlignedPointerFromInternalField(int index,
+npm error       |               ^                                  ~~~~~~~~~~
+npm error   961 |                                                  EmbedderDataTypeTag tag) {
+npm error       |                                                  ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:938:15: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   938 | void* Object::GetAlignedPointerFromInternalField(v8::Isolate* isolate,
+npm error       |               ^                                  ~~~~~~~~~~~~~~~~~~~~~
+npm error   939 |                                                  int index,
+npm error       |                                                  ~~~~~~~~~~
+npm error   940 |                                                  EmbedderDataTypeTag tag) {
+npm error       |                                                  ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:550:26: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   550 |   V8_INLINE static void* GetAlignedPointerFromInternalField(
+npm error       |                          ^
+npm error   551 |       const PersistentBase<Object>& object, int index,
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error   552 |       EmbedderDataTypeTag tag) {
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:558:26: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   558 |   V8_INLINE static void* GetAlignedPointerFromInternalField(
+npm error       |                          ^
+npm error   559 |       const BasicTracedReference<Object>& object, int index,
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error   560 |       EmbedderDataTypeTag tag) {
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error ../node_modules/nan/nan.h:827:58: error: too few arguments to function call, expected 3, have 2
+npm error   827 |     object->SetAlignedPointerInInternalField(index, value);
+npm error       |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~             ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:570:8: note: 'SetAlignedPointerInInternalField' declared here
+npm error   570 |   void SetAlignedPointerInInternalField(int index, void* value,
+npm error       |        ^                                ~~~~~~~~~~~~~~~~~~~~~~~
+npm error   571 |                                         EmbedderDataTypeTag tag);
+npm error       |                                         ~~~~~~~~~~~~~~~~~~~~~~~
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error ../node_modules/nan/nan.h:1171:25: error: no member named 'NO_NULL_TERMINATION' in 'v8::String'
+npm error  1171 |             v8::String::NO_NULL_TERMINATION | imp::kReplaceInvalidUtf8;
+npm error       |                         ^~~~~~~~~~~~~~~~~~~
+npm error ../node_modules/nan/nan.h:1173:27: error: no member named 'WriteUtf8' in 'v8::String'
+npm error  1173 |         length_ = string->WriteUtf8(v8::Isolate::GetCurrent(), str_,
+npm error       |                   ~~~~~~~~^
+npm error ../node_modules/nan/nan.h:2418:18: warning: 'Encode' is deprecated: Use TryEncode(...) instead [-Wdeprecated-declarations]
+npm error  2418 |     return node::Encode(
+npm error       |                  ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:1211:1: note: 'Encode' has been explicitly marked deprecated here
+npm error  1211 | NODE_DEPRECATED("Use TryEncode(...) instead",
+npm error       | ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:116:20: note: expanded from macro 'NODE_DEPRECATED'
+npm error   116 |     __attribute__((deprecated(message))) declarator
+npm error       |                    ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error ../node_modules/nan/nan.h:2423:18: warning: 'Encode' is deprecated: Use TryEncode(...) instead [-Wdeprecated-declarations]
+npm error  2423 |     return node::Encode(
+npm error       |                  ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:1202:1: note: 'Encode' has been explicitly marked deprecated here
+npm error  1202 | NODE_DEPRECATED(
+npm error       | ^
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:116:20: note: expanded from macro 'NODE_DEPRECATED'
+npm error   116 |     __attribute__((deprecated(message))) declarator
+npm error       |                    ^
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error ../node_modules/nan/nan.h:2590:9: error: no type named 'AccessControl' in namespace 'v8'
+npm error  2590 |   , v8::AccessControl settings
+npm error       |     ~~~~^
+npm error ../node_modules/nan/nan.h:2643:9: error: no type named 'AccessControl' in namespace 'v8'
+npm error  2643 |   , v8::AccessControl settings = v8::DEFAULT
+npm error       |     ~~~~^
+npm error ../node_modules/nan/nan.h:2643:38: error: no member named 'DEFAULT' in namespace 'v8'
+npm error  2643 |   , v8::AccessControl settings = v8::DEFAULT
+npm error       |                                      ^~~~~~~
+npm error ../node_modules/nan/nan.h:2692:9: error: no type named 'AccessControl' in namespace 'v8'
+npm error  2692 |   , v8::AccessControl settings = v8::DEFAULT
+npm error       |     ~~~~^
+npm error ../node_modules/nan/nan.h:2692:38: error: no member named 'DEFAULT' in namespace 'v8'
+npm error  2692 |   , v8::AccessControl settings = v8::DEFAULT
+npm error       |                                      ^~~~~~~
+npm error In file included from ../src/libxmljs.cc:7:
+npm error In file included from ../src/libxmljs.h:5:
+npm error In file included from ../node_modules/nan/nan.h:2937:
+npm error ../node_modules/nan/nan_weak.h:279:34: error: no matching member function for call to 'GetAlignedPointerFromInternalField'
+npm error   279 |       internal_fields[i] = self->GetAlignedPointerFromInternalField(i);
+npm error       |                            ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:960:15: note: candidate function not viable: requires 2 arguments, but 1 was provided
+npm error   960 | void* Object::GetAlignedPointerFromInternalField(int index,
+npm error       |               ^                                  ~~~~~~~~~~
+npm error   961 |                                                  EmbedderDataTypeTag tag) {
+npm error       |                                                  ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:938:15: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   938 | void* Object::GetAlignedPointerFromInternalField(v8::Isolate* isolate,
+npm error       |               ^                                  ~~~~~~~~~~~~~~~~~~~~~
+npm error   939 |                                                  int index,
+npm error       |                                                  ~~~~~~~~~~
+npm error   940 |                                                  EmbedderDataTypeTag tag) {
+npm error       |                                                  ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:550:26: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   550 |   V8_INLINE static void* GetAlignedPointerFromInternalField(
+npm error       |                          ^
+npm error   551 |       const PersistentBase<Object>& object, int index,
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error   552 |       EmbedderDataTypeTag tag) {
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/v8-object.h:558:26: note: candidate function not viable: requires 3 arguments, but 1 was provided
+npm error   558 |   V8_INLINE static void* GetAlignedPointerFromInternalField(
+npm error       |                          ^
+npm error   559 |       const BasicTracedReference<Object>& object, int index,
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error   560 |       EmbedderDataTypeTag tag) {
+npm error       |       ~~~~~~~~~~~~~~~~~~~~~~~
+npm error ../src/libxmljs.cc:250:1: warning: cast from 'void (*)(Nan::ADDON_REGISTER_FUNCTION_ARGS_TYPE)' (aka 'void (*)(Local<v8::Object>)') to 'node::addon_register_func' (aka 'void (*)(v8::Local<v8::Object>, v8::Local<v8::Value>, void *)') converts to incompatible function type [-Wcast-function-type-mismatch]
+npm error   250 | NODE_MODULE(xmljs, init)
+npm error       | ^~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:1336:3: note: expanded from macro 'NODE_MODULE'
+npm error  1336 |   NODE_MODULE_X(modname, regfunc, NULL, 0)  // NOLINT (readability/null_usage)
+npm error       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error /Users/ps/Library/Caches/node-gyp/26.0.0/include/node/node.h:1302:7: note: expanded from macro 'NODE_MODULE_X'
+npm error  1302 |       (node::addon_register_func) (regfunc),                          \
+npm error       |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+npm error 19 warnings and 12 errors generated.
+npm error make: *** [Release/obj.target/xmljs/src/libxmljs.o] Error 1
+npm error gyp ERR! build error 
+npm error gyp ERR! stack Error: `make` failed with exit code: 2
+npm error gyp ERR! stack at ChildProcess.<anonymous> (/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/node-gyp/lib/build.js:219:23)
+npm error gyp ERR! System Darwin 25.3.0
+npm error gyp ERR! command "/usr/local/Cellar/node/26.0.0/bin/node" "/Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/.bin/node-gyp" "rebuild"
+npm error gyp ERR! cwd /Users/ps/SAZ/saz-lab/targets/juice-shop/node_modules/libxmljs2
+npm error gyp ERR! node -v v26.0.0
+npm error gyp ERR! node-gyp -v v11.5.0
+npm error gyp ERR! not ok
+npm notice
+npm notice New minor version of npm available! 11.12.1 -> 11.16.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.16.0
+npm notice To update run: npm install -g npm@11.16.0
+npm notice
+npm error A complete log of this run can be found in: /Users/ps/.npm/_logs/2026-06-02T14_34_48_558Z-debug-0.log
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel juice-shop % curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 16563  100 16563    0     0  90306      0 --:--:-- --:--:-- --:--:-- 90016
+=> Downloading nvm from git to '/Users/ps/.nvm'
+=> Cloning into '/Users/ps/.nvm'...
+remote: Enumerating objects: 428, done.
+remote: Counting objects: 100% (428/428), done.
+remote: Compressing objects: 100% (354/354), done.
+remote: Total 428 (delta 60), reused 194 (delta 46), pack-reused 0 (from 0)
+Receiving objects: 100% (428/428), 415.66 KiB | 152.00 KiB/s, done.
+Resolving deltas: 100% (60/60), done.
+* (HEAD detached at FETCH_HEAD)
+  master
+=> Compressing and cleaning up git repository
+
+=> Appending nvm source string to /Users/ps/.zshrc
+=> Appending bash_completion source string to /Users/ps/.zshrc
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+ps@MacBook-Pro-Pavel juice-shop % source ~/.zshrc
+ps@MacBook-Pro-Pavel juice-shop % nvm install 22
+Downloading and installing node v22.22.3...
+Downloading https://nodejs.org/dist/v22.22.3/node-v22.22.3-darwin-x64.tar.xz...
+########################################################################################################################################################################## 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v22.22.3 (npm v10.9.8)
+Creating default alias: default -> 22 (-> v22.22.3)
+ps@MacBook-Pro-Pavel juice-shop % nvm use 22
+Now using node v22.22.3 (npm v10.9.8)
+ps@MacBook-Pro-Pavel juice-shop % rm -rf node_modules package-lock.json
+ps@MacBook-Pro-Pavel juice-shop % npm install --omit=dev                                 
+npm warn deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm warn deprecated osenv@0.1.5: This package is no longer supported.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated dottie@2.0.7: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated npmlog@6.0.2: This package is no longer supported.
+npm warn deprecated eivindfjeldstad-dot@0.0.1: Use @eivifj/dot instead
+npm warn deprecated npmlog@4.1.2: This package is no longer supported.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated are-we-there-yet@1.1.7: This package is no longer supported.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@7.1.7: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated jws@0.2.6: Security update: Versions below 3.0.0 are deprecated.
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+npm warn deprecated jsonwebtoken@0.1.0: Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
+npm warn deprecated prebuild-install@5.3.6: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+npm warn deprecated jsonwebtoken@0.4.0: Critical vulnerability fix in v5.0.0. See https://auth0.com/blog/2015/03/31/critical-vulnerabilities-in-json-web-token-libraries/
+npm warn deprecated gauge@2.7.4: This package is no longer supported.
+npm warn deprecated multer@1.4.5-lts.2: Multer 1.x is impacted by a number of vulnerabilities, which have been patched in 2.x. You should upgrade to the latest 2.x version.
+npm warn deprecated notevil@1.3.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated messageformat@2.3.0: Package renamed as '@messageformat/core', see messageformat.github.io for more details. 'messageformat@4' will eventually provide a polyfill for Intl.MessageFormat, once it's been defined by Unicode & ECMA.
+npm warn deprecated gauge@4.0.4: This package is no longer supported.
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated tar@4.4.19: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated node-pre-gyp@0.15.0: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated iltorb@2.4.5: The zlib module provides APIs for brotli compression/decompression starting with Node.js v10.16.0, please use it over iltorb
+
+> juice-shop@20.0.0 postinstall
+> cd frontend && npm install && cd .. && npm run build:frontend && (npm run --silent build:server || cd .)
+
+
+added 597 packages, and audited 598 packages in 6m
+
+143 packages are looking for funding
+  run `npm fund` for details
+
+19 vulnerabilities (12 low, 3 moderate, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+> juice-shop@20.0.0 build:frontend
+> cd frontend && npm run build
+
+
+> frontend@20.0.0 build
+> ng build --configuration production && npm run sbom
+
+Initial chunk files                         | Names                           |  Raw size | Estimated transfer size
+main.js                                     | main                            | 783.77 kB |               149.66 kB
+chunk-5A4PAMCX.js                           | -                               | 359.25 kB |                89.81 kB
+styles.css                                  | styles                          | 151.32 kB |                16.81 kB
+chunk-WY4C5P5X.js                           | -                               | 147.27 kB |                27.93 kB
+chunk-WCMHMTPX.js                           | -                               | 138.86 kB |                32.01 kB
+chunk-Q5ZAR2M3.js                           | -                               |  96.61 kB |                19.71 kB
+chunk-UNFVUBM2.js                           | -                               |  77.56 kB |                23.47 kB
+chunk-EVPWCPRQ.js                           | -                               |  41.20 kB |                 8.17 kB
+polyfills.js                                | polyfills                       |  34.59 kB |                11.33 kB
+chunk-PWDRHPZO.js                           | -                               |  33.14 kB |                 5.88 kB
+scripts.js                                  | scripts                         |  20.70 kB |                 6.09 kB
+chunk-C36GZNT2.js                           | -                               |   9.72 kB |                 3.83 kB
+chunk-NUMHA4AJ.js                           | -                               |   2.16 kB |               922 bytes
+chunk-4SMKVUHN.js                           | -                               |   1.01 kB |                 1.01 kB
+chunk-PX7UKXVL.js                           | -                               | 944 bytes |               944 bytes
+chunk-WI5572LT.js                           | -                               | 547 bytes |               547 bytes
+
+                                            | Initial total                   |   1.90 MB |               398.14 kB
+
+Lazy chunk files                            | Names                           |  Raw size | Estimated transfer size
+chunk-5433N6CC.js                           | -                               | 517.26 kB |               147.58 kB
+chunk-BDIM6GZO.js                           | -                               | 484.92 kB |               133.23 kB
+recycle.component-HJO434BO.js               | recycle-component               |  99.15 kB |                18.81 kB
+about.component-DITQPTH6.js                 | about-component                 |  88.95 kB |                18.61 kB
+coding-challenge-page.component-3SLRICM3.js | coding-challenge-page-component |  44.06 kB |                12.93 kB
+hacking-instructor-TNP7OAEF.js              | index                           |  36.61 kB |                 9.16 kB
+web3-sandbox.module-COEUEWDA.js             | web3-sandbox-module             |  16.88 kB |                 5.19 kB
+faucet.module-QLIJQN6G.js                   | faucet-module                   |  11.85 kB |                 3.60 kB
+confetti-22GFNPW3.js                        | index                           |  11.14 kB |                 4.05 kB
+chunk-M6LNWEW6.js                           | -                               |   9.15 kB |               793 bytes
+wallet-web3.module-JNNESGJF.js              | wallet-web3-module              |   6.87 kB |                 2.48 kB
+
+Application bundle generation complete. [25.909 seconds] - 2026-06-02T14:58:30.474Z
+
+Output location: /Users/ps/SAZ/saz-lab/targets/juice-shop/frontend/dist/frontend
+
+
+> frontend@20.0.0 sbom
+> cyclonedx-esbuild --output-reproducible --output-file dist/bom/bom.json dist/frontend/stats.json
+
+LOG   | writing BOM to: dist/bom/bom.json
+sh: tsc: command not found
+
+added 883 packages, and audited 884 packages in 9m
+
+107 packages are looking for funding
+  run `npm fund` for details
+
+37 vulnerabilities (3 low, 9 moderate, 20 high, 5 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+ps@MacBook-Pro-Pavel juice-shop % 
+ps@MacBook-Pro-Pavel SAZ % 
+ps@MacBook-Pro-Pavel SAZ % docker run -d --name webgoat -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 \
+  -e TZ=Europe/Moscow webgoat/webgoat
+Unable to find image 'webgoat/webgoat:latest' locally
+latest: Pulling from webgoat/webgoat
+4f4fb700ef54: Pull complete 
+307ac9d4e999: Pull complete 
+5a7813e071bf: Pull complete 
+ea28f6f7f0aa: Pull complete 
+d1504bee8985: Pull complete 
+7b5a3507f742: Pull complete 
+7b2e4df376c9: Pull complete 
+59be3b1b776b: Download complete 
+Digest: sha256:3101bd9e7bcfe122d7ef91e690ef3720de36cc4e86b3d06763a1ddf2e2751a4b
+Status: Downloaded newer image for webgoat/webgoat:latest
+f7c059274e351fc95cfee7593fd14bd35f4c386f7df250240161b5d707820427
+ps@MacBook-Pro-Pavel SAZ % ls
+logs	saz-lab	Task
+ps@MacBook-Pro-Pavel SAZ % cd saz-lab/targets 
+ps@MacBook-Pro-Pavel targets % git clone --depth 1 https://github.com/WebGoat/WebGoat.git webgoat 
+Cloning into 'webgoat'...
+remote: Enumerating objects: 1561, done.
+remote: Counting objects: 100% (1561/1561), done.
+remote: Compressing objects: 100% (1210/1210), done.
+remote: Total 1561 (delta 216), reused 1528 (delta 208), pack-reused 0 (from 0)
+Receiving objects: 100% (1561/1561), 14.16 MiB | 2.35 MiB/s, done.
+Resolving deltas: 100% (216/216), done.
+ps@MacBook-Pro-Pavel targets % docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED              STATUS                          PORTS                                                NAMES
+f7c059274e35   webgoat/webgoat         "java -Duser.home=/h…"   About a minute ago   Up About a minute (unhealthy)   127.0.0.1:8080->8080/tcp, 127.0.0.1:9090->9090/tcp   webgoat
+d9ebd0b7424b   bkimminich/juice-shop   "/nodejs/bin/node /j…"   51 minutes ago       Up 51 minutes                   0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp          juice-shop
+ps@MacBook-Pro-Pavel targets % ps
+  PID TTY           TIME CMD
+  746 ttys000    0:00.20 -zsh
+  783 ttys001    0:00.28 -zsh
+  818 ttys002    0:00.13 -zsh
+81080 ttys004    0:00.14 /bin/zsh -il
+ 1130 ttys005    0:00.11 /bin/zsh -i
+81246 ttys006    0:00.11 /bin/zsh -il
+ 1979 ttys007    0:00.11 /bin/zsh -il
+ 1981 ttys008    0:00.11 /bin/zsh -il
+ 2302 ttys009    0:00.09 /bin/zsh -il
+37075 ttys010    0:00.56 /bin/zsh -il
+ps@MacBook-Pro-Pavel targets % ps -ll
+  UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+  501   746   745     4006   0  31  0 34515904   3520 -      S+                  0 ttys000    0:00.20 -zsh
+  501   783   780     4006   0  31  0 34655256   4348 -      S                   0 ttys001    0:00.28 -zsh
+  501   818   817     4006   0  31  0 34600896   3192 -      S+                  0 ttys002    0:00.13 -zsh
+  501 81080  1041     4006   0  31  0 33964880   1796 -      Ss+                 0 ttys004    0:00.14 /bin/zsh -il
+  501  1130  1041     4006   0  31  0 34106192   2520 -      Ss+                 0 ttys005    0:00.11 /bin/zsh -i
+  501 81246  1041     4006   0  31  0 33926992   1184 -      Ss+                 0 ttys006    0:00.11 /bin/zsh -il
+  501  1979  1041     4006   0  31  0 34122576   2408 -      Ss+                 0 ttys007    0:00.11 /bin/zsh -il
+  501  1981  1041     4006   0  31  0 33999696   2748 -      Ss+                 0 ttys008    0:00.11 /bin/zsh -il
+  501  2302  1041     4006   0  31  0 34095952   2836 -      Ss+                 0 ttys009    0:00.09 /bin/zsh -il
+  501 37075  1041     4006   0  31  0 34368424   3368 -      Ss+                 0 ttys010    0:00.56 /bin/zsh -il
+ps@MacBook-Pro-Pavel targets % cd juice-shop
+ps@MacBook-Pro-Pavel juice-shop % ls     
+AGENTS.md               LICENSE                 app.ts                  data                    i18n                    routes                  threat-model.json
+CODE_OF_CONDUCT.md      README.md               config                  docker-compose.test.yml lib                     rsn                     tsconfig.json
+CONTRIBUTING.md         REFERENCES.md           config.schema.yml       encryptionkeys          models                  screenshots             uploads
+Dockerfile              SECURITY.md             crowdin.yaml            eslint.config.mjs       monitoring              server.ts               vagrant
+Gruntfile.js            SOLUTIONS.md            ctf.key                 frontend                node_modules            swagger.yml             views
+HALL_OF_FAME.md         app.json                cypress.config.ts       ftp                     package.json            test
+ps@MacBook-Pro-Pavel juice-shop % cd ..
+ps@MacBook-Pro-Pavel targets % ls
+juice-shop      webgoat
+ps@MacBook-Pro-Pavel targets % cd webgoat 
+ps@MacBook-Pro-Pavel webgoat % ls
+CODE_OF_CONDUCT.md              Dockerfile                      PULL_REQUEST_TEMPLATE.md        config                          mvnw.cmd
+CONTRIBUTING.md                 Dockerfile_desktop              README.md                       docs                            pom.xml
+COPYRIGHT.txt                   FAQ.md                          README_I18N.md                  mvn-debug                       src
+CREATE_RELEASE.md               LICENSE.txt                     RELEASE_NOTES.md                mvnw
+ps@MacBook-Pro-Pavel webgoat % cd ..
+ps@MacBook-Pro-Pavel targets % 

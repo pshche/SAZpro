@@ -1,0 +1,405 @@
+
+ps@MacBook-Pro-Pavel saz-lab % docker run --rm --network host \
+  -v $(pwd)/reports/dast:/zap/wrk/:rw \
+  -t ghcr.io/zaproxy/zaproxy:stable \
+  zap-baseline.py \
+    -t http://localhost:3000 \
+    -J juice-shop.baseline.json \
+    -r juice-shop.baseline.html \
+    -x juice-shop.baseline.xml
+Unable to find image 'ghcr.io/zaproxy/zaproxy:stable' locally
+stable: Pulling from zaproxy/zaproxy
+da102f97cc68: Pull complete 
+73f85fd1e1c7: Pull complete 
+0a0845949741: Pull complete 
+84451e0b44c1: Pull complete 
+93cc952dc5cc: Pull complete 
+d322eee62605: Pull complete 
+c007d0a601f6: Pull complete 
+4f4fb700ef54: Pull complete 
+e976a7ad63fb: Pull complete 
+f37405da30c1: Pull complete 
+998e70c6177f: Pull complete 
+094d77545561: Pull complete 
+4146f9e238c5: Pull complete 
+db8721613bdf: Pull complete 
+adb83023d398: Pull complete 
+9d9b75cbc52d: Pull complete 
+629d3e04d447: Pull complete 
+32e3cdc4f811: Pull complete 
+56d9865bac49: Pull complete 
+068fedd6b0f1: Pull complete 
+Digest: sha256:2ec1d5d5b44d55cfd02ba9b89cd26852f06d92b7fc0ce9f064b9463babc73074
+Status: Downloaded newer image for ghcr.io/zaproxy/zaproxy:stable
+Using the Automation Framework
+Total of 158 URLs
+PASS: Vulnerable JS Library (Powered by Retire.js) [10003]
+PASS: In Page Banner Information Leak [10009]
+PASS: Cookie No HttpOnly Flag [10010]
+PASS: Cookie Without Secure Flag [10011]
+PASS: Re-examine Cache-control Directives [10015]
+PASS: Cross-Domain JavaScript Source File Inclusion [10017]
+PASS: Content-Type Header Missing [10019]
+PASS: Anti-clickjacking Header [10020]
+PASS: X-Content-Type-Options Header Missing [10021]
+PASS: Information Disclosure - Debug Error Messages [10023]
+PASS: Information Disclosure - Sensitive Information in URL [10024]
+PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+PASS: HTTP Parameter Override [10026]
+PASS: Information Disclosure - Suspicious Comments [10027]
+PASS: Off-site Redirect [10028]
+PASS: Cookie Poisoning [10029]
+PASS: User Controllable Charset [10030]
+PASS: User Controllable HTML Element Attribute (Potential XSS) [10031]
+PASS: Viewstate [10032]
+PASS: Directory Browsing [10033]
+PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+PASS: Strict-Transport-Security Header [10035]
+PASS: HTTP Server Response Header [10036]
+PASS: Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s) [10037]
+PASS: X-Backend-Server Header Information Leak [10039]
+PASS: Secure Pages Include Mixed Content [10040]
+PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+PASS: User Controllable JavaScript Event (XSS) [10043]
+PASS: Big Redirect Detected (Potential Sensitive Information Leak) [10044]
+PASS: Retrieved from Cache [10050]
+PASS: X-ChromeLogger-Data (XCOLD) Header Information Leak [10052]
+PASS: Cookie without SameSite Attribute [10054]
+PASS: CSP [10055]
+PASS: X-Debug-Token Information Leak [10056]
+PASS: Username Hash Found [10057]
+PASS: X-AspNet-Version Response Header [10061]
+PASS: PII Disclosure [10062]
+PASS: Hash Disclosure [10097]
+PASS: Source Code Disclosure [10099]
+PASS: Weak Authentication Method [10105]
+PASS: Reverse Tabnabbing [10108]
+PASS: Authentication Request Identified [10111]
+PASS: Session Management Response Identified [10112]
+PASS: Verification Request Identified [10113]
+PASS: Script Served From Malicious Domain (polyfill) [10115]
+PASS: ZAP is Out of Date [10116]
+PASS: Absence of Anti-CSRF Tokens [10202]
+PASS: Private IP Disclosure [2]
+PASS: Session ID in URL Rewrite [3]
+PASS: Script Passive Scan Rules [50001]
+PASS: Stats Passive Scan Rule [50003]
+PASS: Insecure JSF ViewState [90001]
+PASS: Java Serialization Object [90002]
+PASS: Sub Resource Integrity Attribute Missing [90003]
+PASS: Charset Mismatch [90011]
+PASS: Application Error Disclosure [90022]
+PASS: WSDL File Detection [90030]
+PASS: Loosely Scoped Cookie [90033]
+WARN-NEW: Content Security Policy (CSP) Header Not Set [10038] x 5 
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/ftp/encrypt.pyc (403 Forbidden)
+	http://localhost:3000/ftp/package-lock.json.bak (403 Forbidden)
+	http://localhost:3000/ftp/package.json.bak (403 Forbidden)
+	http://localhost:3000/sitemap.xml (200 OK)
+WARN-NEW: Storable and Cacheable Content [10049] x 6 
+	http://localhost:3000/robots.txt (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/assets/public/favicon_js.ico (200 OK)
+	http://localhost:3000/chunk-SCY7YOCS.js (200 OK)
+	http://localhost:3000/polyfills.js (200 OK)
+WARN-NEW: Deprecated Feature Policy Header Set [10063] x 5 
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/chunk-SCY7YOCS.js (200 OK)
+	http://localhost:3000/chunk-SI2GTEZM.js (200 OK)
+	http://localhost:3000/polyfills.js (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+WARN-NEW: Timestamp Disclosure - Unix [10096] x 5 
+	http://localhost:3000 (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+	http://localhost:3000/styles.css (200 OK)
+WARN-NEW: Cross-Domain Misconfiguration [10098] x 4 
+	http://localhost:3000/assets/public/favicon_js.ico (200 OK)
+	http://localhost:3000/chunk-PX7UKXVL.js (200 OK)
+	http://localhost:3000/chunk-SI2GTEZM.js (200 OK)
+	http://localhost:3000/styles.css (200 OK)
+WARN-NEW: Modern Web Application [10109] x 5 
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/juice-shop/build/routes/fileServer.js:59:18 (200 OK)
+	http://localhost:3000/juice-shop/node_modules/express/lib/router/index.js:365:14 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+WARN-NEW: Dangerous JS Functions [10110] x 1 
+	http://localhost:3000/main.js (200 OK)
+WARN-NEW: Cross-Origin-Embedder-Policy Header Missing or Invalid [90004] x 10 
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/ftp (200 OK)
+	http://localhost:3000/juice-shop/build/routes/fileServer.js:59:18 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 8	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 59
+
+What's next:
+    Debug this container error with Gordon → docker ai "help me fix this container error"
+ps@MacBook-Pro-Pavel saz-lab % 
+
+
+
+ps@MacBook-Pro-Pavel saz-lab % docker run --rm --network host \
+  -v $(pwd)/reports/dast:/zap/wrk/:rw \
+  -t ghcr.io/zaproxy/zaproxy:stable \
+  zap-full-scan.py \
+    -t http://localhost:3000 \
+    -J juice-shop.full.json \
+    -r juice-shop.full.html \
+    -x juice-shop.full.xml \
+    -j -m 5
+Total of 241 URLs
+PASS: Directory Browsing [0]
+PASS: Vulnerable JS Library (Powered by Retire.js) [10003]
+PASS: Swagger UI Secret & Vulnerability Detector [100043]
+PASS: In Page Banner Information Leak [10009]
+PASS: Cookie No HttpOnly Flag [10010]
+PASS: Cookie Without Secure Flag [10011]
+PASS: Re-examine Cache-control Directives [10015]
+PASS: Cross-Domain JavaScript Source File Inclusion [10017]
+PASS: Content-Type Header Missing [10019]
+PASS: Information Disclosure - Debug Error Messages [10023]
+PASS: Information Disclosure - Sensitive Information in URL [10024]
+PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+PASS: HTTP Parameter Override [10026]
+PASS: Information Disclosure - Suspicious Comments [10027]
+PASS: Off-site Redirect [10028]
+PASS: Cookie Poisoning [10029]
+PASS: User Controllable Charset [10030]
+PASS: User Controllable HTML Element Attribute (Potential XSS) [10031]
+PASS: Viewstate [10032]
+PASS: Directory Browsing [10033]
+PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+PASS: Strict-Transport-Security Header [10035]
+PASS: HTTP Server Response Header [10036]
+PASS: Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s) [10037]
+PASS: X-Backend-Server Header Information Leak [10039]
+PASS: Secure Pages Include Mixed Content [10040]
+PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+PASS: User Controllable JavaScript Event (XSS) [10043]
+PASS: Big Redirect Detected (Potential Sensitive Information Leak) [10044]
+PASS: Source Code Disclosure - /WEB-INF Folder [10045]
+PASS: HTTPS Content Available via HTTP [10047]
+PASS: Remote Code Execution - Shell Shock [10048]
+PASS: Content Cacheability [10049]
+PASS: Retrieved from Cache [10050]
+PASS: Relative Path Confusion [10051]
+PASS: X-ChromeLogger-Data (XCOLD) Header Information Leak [10052]
+PASS: Cookie without SameSite Attribute [10054]
+PASS: CSP [10055]
+PASS: X-Debug-Token Information Leak [10056]
+PASS: Username Hash Found [10057]
+PASS: GET for POST [10058]
+PASS: X-AspNet-Version Response Header [10061]
+PASS: PII Disclosure [10062]
+PASS: Hash Disclosure [10097]
+PASS: Source Code Disclosure [10099]
+PASS: User Agent Fuzzer [10104]
+PASS: Weak Authentication Method [10105]
+PASS: Httpoxy - Proxy Header Misuse [10107]
+PASS: Reverse Tabnabbing [10108]
+PASS: Modern Web Application [10109]
+PASS: Authentication Request Identified [10111]
+PASS: Session Management Response Identified [10112]
+PASS: Verification Request Identified [10113]
+PASS: Script Served From Malicious Domain (polyfill) [10115]
+PASS: ZAP is Out of Date [10116]
+PASS: Absence of Anti-CSRF Tokens [10202]
+PASS: Anti-CSRF Tokens Check [20012]
+PASS: HTTP Parameter Pollution [20014]
+PASS: Heartbleed OpenSSL Vulnerability [20015]
+PASS: Cross-Domain Misconfiguration [20016]
+PASS: Source Code Disclosure - CVE-2012-1823 [20017]
+PASS: Remote Code Execution - CVE-2012-1823 [20018]
+PASS: External Redirect [20019]
+PASS: Buffer Overflow [30001]
+PASS: Format String Error [30002]
+PASS: Integer Overflow Error [30003]
+PASS: CRLF Injection [40003]
+PASS: Parameter Tampering [40008]
+PASS: Server Side Include [40009]
+PASS: Cross Site Scripting (Reflected) [40012]
+PASS: Session Fixation [40013]
+PASS: Cross Site Scripting (Persistent) [40014]
+PASS: Cross Site Scripting (Persistent) - Prime [40016]
+PASS: Cross Site Scripting (Persistent) - Spider [40017]
+PASS: SQL Injection - MySQL (Time Based) [40019]
+PASS: SQL Injection - Hypersonic SQL (Time Based) [40020]
+PASS: SQL Injection - Oracle (Time Based) [40021]
+PASS: SQL Injection - PostgreSQL (Time Based) [40022]
+PASS: Possible Username Enumeration [40023]
+PASS: Proxy Disclosure [40025]
+PASS: Cross Site Scripting (DOM Based) [40026]
+PASS: SQL Injection - MsSQL (Time Based) [40027]
+PASS: ELMAH Information Leak [40028]
+PASS: Trace.axd Information Leak [40029]
+PASS: Out of Band XSS [40031]
+PASS: .htaccess Information Leak [40032]
+PASS: NoSQL Injection - MongoDB [40033]
+PASS: .env Information Leak [40034]
+PASS: Hidden File Finder [40035]
+PASS: Bypassing 403 [40038]
+PASS: CORS Header [40040]
+PASS: Spring Actuator Information Leak [40042]
+PASS: Log4Shell [40043]
+PASS: Exponential Entity Expansion (Billion Laughs Attack) [40044]
+PASS: Spring4Shell [40045]
+PASS: Server Side Request Forgery [40046]
+PASS: Text4shell (CVE-2022-42889) [40047]
+PASS: Remote Code Execution (React2Shell) [40048]
+PASS: Source Code Disclosure - Git [41]
+PASS: Source Code Disclosure - SVN [42]
+PASS: Source Code Disclosure - File Inclusion [43]
+PASS: Script Active Scan Rules [50000]
+PASS: Script Passive Scan Rules [50001]
+PASS: Path Traversal [6]
+PASS: Remote File Inclusion [7]
+PASS: Insecure JSF ViewState [90001]
+PASS: Java Serialization Object [90002]
+PASS: Sub Resource Integrity Attribute Missing [90003]
+PASS: Charset Mismatch [90011]
+PASS: XSLT Injection [90017]
+PASS: Server Side Code Injection [90019]
+PASS: Remote OS Command Injection [90020]
+PASS: XPath Injection [90021]
+PASS: Application Error Disclosure [90022]
+PASS: XML External Entity Attack [90023]
+PASS: Generic Padding Oracle [90024]
+PASS: Expression Language Injection [90025]
+PASS: SOAP Action Spoofing [90026]
+PASS: Cookie Slack Detector [90027]
+PASS: Insecure HTTP Method [90028]
+PASS: SOAP XML Injection [90029]
+PASS: WSDL File Detection [90030]
+PASS: Loosely Scoped Cookie [90033]
+PASS: Cloud Metadata Potentially Exposed [90034]
+PASS: Server Side Template Injection [90035]
+PASS: Server Side Template Injection (Blind) [90036]
+PASS: Remote OS Command Injection (Time Based) [90037]
+PASS: NoSQL Injection - MongoDB (Time Based) [90039]
+WARN-NEW: Missing Anti-clickjacking Header [10020] x 3 
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlRq&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlac&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlhE&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+WARN-NEW: X-Content-Type-Options Header Missing [10021] x 5 
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlFv (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlRq&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlRv&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlac&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlhE&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+WARN-NEW: Content Security Policy (CSP) Header Not Set [10038] x 11 
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+	http://localhost:3000/ftp/eastere.gg (403 Forbidden)
+	http://localhost:3000/ftp (200 OK)
+WARN-NEW: Deprecated Feature Policy Header Set [10063] x 11 
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/chunk-SI2GTEZM.js (200 OK)
+	http://localhost:3000/chunk-PX7UKXVL.js (200 OK)
+	http://localhost:3000/chunk-GNBEOV4E.js (200 OK)
+	http://localhost:3000 (200 OK)
+WARN-NEW: Backup File Disclosure [10095] x 31 
+	http://localhost:3000/ftp/quarantine.bak (200 OK)
+	http://localhost:3000/ftp/quarantine.backup (200 OK)
+	http://localhost:3000/ftp/quarantine.bac (200 OK)
+	http://localhost:3000/ftp/quarantine.zip (200 OK)
+	http://localhost:3000/ftp/quarantine.tar (200 OK)
+WARN-NEW: Timestamp Disclosure - Unix [10096] x 17 
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+WARN-NEW: Cross-Domain Misconfiguration [10098] x 17 
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/robots.txt (200 OK)
+	http://localhost:3000/chunk-UNFVUBM2.js (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/chunk-524KQQJQ.js (200 OK)
+WARN-NEW: HTTP Only Site [10106] x 1 
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwuLa (0)
+WARN-NEW: Dangerous JS Functions [10110] x 2 
+	http://localhost:3000/main.js (200 OK)
+	http://localhost:3000/chunk-GJJPXCX3.js (200 OK)
+WARN-NEW: Private IP Disclosure [2] x 1 
+	http://localhost:3000/rest/admin/application-configuration (200 OK)
+WARN-NEW: Session ID in URL Rewrite [3] x 11 
+	http://localhost:3000/socket.io/?EIO=4&transport=websocket&sid=nnvG-jZnYstsM_FAAAAO (101 Switching Protocols)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlRq&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlRv&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlac&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+	http://localhost:3000/socket.io/?EIO=4&transport=polling&t=PwSwlhE&sid=nnvG-jZnYstsM_FAAAAO (200 OK)
+WARN-NEW: SQL Injection [40018] x 1 
+	http://localhost:3000/rest/products/search?q=%27%28 (500 Internal Server Error)
+WARN-NEW: Cross-Origin-Embedder-Policy Header Missing or Invalid [90004] x 10 
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000/ (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000 (200 OK)
+	http://localhost:3000/sitemap.xml (200 OK)
+FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 13	WARN-INPROG: 0	INFO: 0	IGNORE: 0	PASS: 129
+
+
+ps@MacBook-Pro-Pavel saz-lab % docker run --rm \
+  -v $(pwd)/tools/zap:/zap/plans:ro \
+  -v $(pwd)/reports/dast:/zap/wrk:rw \
+  -t ghcr.io/zaproxy/zaproxy:stable \
+  zap.sh -cmd -autorun /zap/plans/juice-shop-addprocessors.yaml
+Found Java version 17.0.19
+Available memory: 15989 MB
+Using JVM args: -Xmx3997m
+980 [main] INFO  org.parosproxy.paros.Constant - Copying default configuration to /home/zap/.ZAP/config.xml
+1239 [main] INFO  org.parosproxy.paros.Constant - Creating directory /home/zap/.ZAP/session
+1240 [main] INFO  org.parosproxy.paros.Constant - Creating directory /home/zap/.ZAP/dirbuster
+1240 [main] INFO  org.parosproxy.paros.Constant - Creating directory /home/zap/.ZAP/fuzzers
+1241 [main] INFO  org.parosproxy.paros.Constant - Creating directory /home/zap/.ZAP/plugin
+Jun 06, 2026 1:04:23 PM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+Job passiveScan-config set maxAlertsPerRule = 10
+Job spider set context = juice-shop
+Job spider set user = student
+Job spider set maxDuration = 3
+Job spider set threadCount = 8
+Job spiderAjax set context = juice-shop
+Job spiderAjax set user = student
+Job spiderAjax set maxDuration = 5
+Unrecognised parameter for job spiderAjax : threadCount
+Job passiveScan-wait set maxDuration = 5
+Job activeScan set context = juice-shop
+Job activeScan set user = student
+Job activeScan set threadPerHost = 8
+Job activeScan set maxRuleDurationInMins = 3
+Job activeScan set maxScanDurationInMins = 30
+Job report set template = traditional-xml
+Job report set reportDir = /zap/wrk
+Job report set reportFile = juice-shop.af
+Job passiveScan-config started
+Job passiveScan-config finished, time taken: 00:00:00
+Job spider started
+Job spider requesting URL http://host.docker.internal:3000
+Job spider terminated
+Job spider found 13,333 URLs
+Job spider finished, time taken: 00:03:07
+Job spiderAjax started
+Job spiderAjax found 524 URLs
+Job spiderAjax finished, time taken: 00:01:33
+Job passiveScan-wait started
+Job passiveScan-wait finished, time taken: 00:00:00
+Job activeScan started
+
+
+
+Job activeScan terminated
+Job activeScan finished, time taken: 00:30:05
+Job report started
+Job report generated report /zap/wrk/juice-shop.af.xml
+Job report finished, time taken: 00:00:00
+Automation plan warnings:
+	Unrecognised parameter for job spiderAjax : threadCount
+
